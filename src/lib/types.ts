@@ -54,6 +54,11 @@ export interface Cliente {
   telefono?: string;
   saldoPendiente: number;
   activo: boolean;
+  // Delivery / route fields
+  direccion?: string;
+  zona?: string;
+  kgHabituales?: number;
+  limiteCreditoDias?: number;
 }
 
 // ── Ventas ─────────────────────────────────────────────────────────────────
@@ -193,4 +198,37 @@ export interface ResumenFormaPago {
   tarjetaDebito: number;
   credito: number;
   totalDigital: number;
+}
+
+// ── Cartera (cuentas por cobrar) ───────────────────────────────────────────
+export interface AbonoCartera {
+  id: string;
+  fecha: string;
+  clienteId: string;
+  monto: number;
+  nota?: string;
+}
+
+// ── Rodeo (ruta de entrega) ────────────────────────────────────────────────
+export interface ParadaRodeo {
+  id: string;
+  clienteId: string;
+  orden: number;
+  kgSugeridos: number;
+  kgEntregados: number;
+  cobrado: number;
+  fiado: number;
+  completada: boolean;
+}
+
+export type EstadoRodeo = "pendiente" | "en_curso" | "liquidado";
+
+export interface RodeoDelDia {
+  id: string;
+  fecha: string;
+  kgCargados: number;
+  paradas: ParadaRodeo[];
+  estado: EstadoRodeo;
+  efectivoRecibido: number;
+  nota?: string;
 }

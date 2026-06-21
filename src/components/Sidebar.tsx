@@ -15,6 +15,8 @@ import {
   IconCostos,
   IconPyL,
   IconImpuestos,
+  IconCartera,
+  IconRodeo,
 } from "./Icons";
 import type { ComponentType } from "react";
 
@@ -30,6 +32,7 @@ const GROUPS: { heading: string; items: { href: string; label: string; Icon: Ico
     items: [
       { href: "/pos", label: "Punto de Venta", Icon: IconPOS },
       { href: "/produccion", label: "Producción", Icon: IconProduccion },
+      { href: "/rodeo", label: "Rodeo", Icon: IconRodeo },
       { href: "/ventas", label: "Ventas", Icon: IconVentas },
     ],
   },
@@ -37,6 +40,7 @@ const GROUPS: { heading: string; items: { href: string; label: string; Icon: Ico
     heading: "Clientes e Inventario",
     items: [
       { href: "/clientes", label: "Clientes", Icon: IconClientes },
+      { href: "/cartera", label: "Cartera", Icon: IconCartera },
       { href: "/inventario", label: "Inventario", Icon: IconInventario },
     ],
   },

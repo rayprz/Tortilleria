@@ -165,3 +165,33 @@ export const IconCalendar = (p: P) => (
     <path d="M16 2v4M8 2v4M3 10h18" />
   </svg>
 );
+
+export const IconCartera = (p: P) => (
+  <svg {...base(p)}>
+    <rect x="2" y="5" width="20" height="14" rx="2" />
+    <path d="M16 13a1 1 0 1 0 0-2 1 1 0 0 0 0 2z" fill="currentColor" stroke="none" />
+    <path d="M2 9h20" />
+  </svg>
+);
+
+export const IconRodeo = (p: P) => (
+  <svg {...base(p)}>
+    <path d="M3 12h2l2-7 4 14 3-10 2 3h5" />
+  </svg>
+);
+
+export const IconMapPin = (p: P) => (
+  <svg {...base(p)}>
+    <path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7z" />
+    <circle cx="12" cy="9" r="2.5" />
+  </svg>
+);
+
+export const IconTruck = (p: P) => (
+  <svg {...base(p)}>
+    <rect x="1" y="3" width="15" height="13" rx="1" />
+    <path d="M16 8h4l3 5v4h-7V8z" />
+    <circle cx="5.5" cy="18.5" r="2.5" />
+    <circle cx="18.5" cy="18.5" r="2.5" />
+  </svg>
+);

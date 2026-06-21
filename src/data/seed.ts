@@ -64,8 +64,11 @@ export const SEED_COMPRAS_INSUMOS: CompraInsumo[] = [
 // ── Clientes ─────────────────────────────────────────────────────────────
 export const SEED_CLIENTES: Cliente[] = [
   { id: "pub-gen", nombre: "Público General", tipo: "menudeo", rfc: "XAXX010101000", saldoPendiente: 0, activo: true },
-  { id: "rest-mol", nombre: "Restaurante El Molcajete", tipo: "mayoreo", rfc: "XMOL123456AB1", regimenFiscal: "601", telefono: "222-145-8890", saldoPendiente: 0, activo: true },
-  { id: "abar-lupe", nombre: "Abarrotes Doña Lupe", tipo: "mayoreo", rfc: "XLUP987654CD2", regimenFiscal: "626", telefono: "222-330-1122", saldoPendiente: 850, activo: true },
+  { id: "rest-mol", nombre: "Restaurante El Molcajete", tipo: "mayoreo", rfc: "XMOL123456AB1", regimenFiscal: "601", telefono: "222-145-8890", saldoPendiente: 0, activo: true, zona: "Centro", direccion: "Blvd. Atlixco 1234, Col. Anzures", kgHabituales: 150 },
+  { id: "abar-lupe", nombre: "Abarrotes Doña Lupe", tipo: "mayoreo", rfc: "XLUP987654CD2", regimenFiscal: "626", telefono: "222-330-1122", saldoPendiente: 850, activo: true, zona: "Poniente", direccion: "Privada Las Flores 23, Col. Santa María", kgHabituales: 90, limiteCreditoDias: 7 },
+  { id: "tienda-maiz", nombre: "Minisuper El Maíz", tipo: "mayoreo", rfc: "XMAI890101AB3", telefono: "222-111-2233", saldoPendiente: 0, activo: true, zona: "Centro", direccion: "Calle Juárez 45, Col. Centro", kgHabituales: 50 },
+  { id: "tienda-norte", nombre: "Abarrotes El Norte", tipo: "mayoreo", rfc: "XNOR780505CD4", telefono: "222-444-5566", saldoPendiente: 320, activo: true, zona: "Norte", direccion: "Av. Insurgentes 112, Col. San Rafael", kgHabituales: 40, limiteCreditoDias: 14 },
+  { id: "tienda-sur", nombre: "Tienda Don Chucho", tipo: "mayoreo", rfc: "XCHU750202EF5", telefono: "222-777-8899", saldoPendiente: 0, activo: true, zona: "Sur", direccion: "Calle Morelos 8, Col. La Paz", kgHabituales: 30 },
 ];
 
 // ── Ventas ───────────────────────────────────────────────────────────────

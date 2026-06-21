@@ -8,6 +8,8 @@ import { VentasProvider } from "@/lib/ventasStore";
 import { NominaProvider } from "@/lib/nominaStore";
 import { GastoProvider } from "@/lib/gastoStore";
 import { InventarioProvider } from "@/lib/inventarioStore";
+import { CarteraProvider } from "@/lib/carteraStore";
+import { RodeoProvider } from "@/lib/rodeoStore";
 import { Sidebar } from "@/components/Sidebar";
 import { Topbar } from "@/components/Topbar";
 
@@ -28,22 +30,26 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
                   <NominaProvider>
                     <GastoProvider>
                       <InventarioProvider>
-                        <div style={{ display: "flex", minHeight: "100vh" }}>
-                          <Sidebar />
-                          <div style={{ flex: 1, display: "flex", flexDirection: "column", minWidth: 0 }}>
-                            <Topbar />
-                            <main
-                              style={{
-                                flex: 1,
-                                padding: "1.5rem",
-                                paddingTop: "4.5rem",
-                                paddingLeft: "2rem",
-                              }}
-                            >
-                              <div style={{ maxWidth: "80rem", margin: "0 auto" }}>{children}</div>
-                            </main>
-                          </div>
-                        </div>
+                        <CarteraProvider>
+                          <RodeoProvider>
+                            <div style={{ display: "flex", minHeight: "100vh" }}>
+                              <Sidebar />
+                              <div style={{ flex: 1, display: "flex", flexDirection: "column", minWidth: 0 }}>
+                                <Topbar />
+                                <main
+                                  style={{
+                                    flex: 1,
+                                    padding: "1.5rem",
+                                    paddingTop: "4.5rem",
+                                    paddingLeft: "2rem",
+                                  }}
+                                >
+                                  <div style={{ maxWidth: "80rem", margin: "0 auto" }}>{children}</div>
+                                </main>
+                              </div>
+                            </div>
+                          </RodeoProvider>
+                        </CarteraProvider>
                       </InventarioProvider>
                     </GastoProvider>
                   </NominaProvider>
